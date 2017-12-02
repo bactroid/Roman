@@ -8,10 +8,10 @@ import qualified Data.Map as Map
 
 romanLookup = Map.fromList [('M', 1000), ('D', 500), ('C', 100), ('L', 50), ('X', 10), ('V', 5), ('I', 1)]
 
-getRomanValue :: Char -> Int
+getRomanValue :: Char -> Integer
 getRomanValue x = fromJust (Map.lookup x romanLookup)
 
-fromRoman :: String -> Int
+fromRoman :: String -> Integer
 fromRoman [] = 0
 fromRoman [x] = getRomanValue x
 fromRoman (x:y:xs) = if getRomanValue x < getRomanValue y then 0 - getRomanValue x + fromRoman (y:xs) else getRomanValue x + fromRoman (y:xs)
