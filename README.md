@@ -19,3 +19,7 @@ This function does not actually check for validity. I should probably add that a
 `toRoman :: Integer -> String`
 
 Converts an Integer into a Roman numeral string.
+
+## Tests
+
+You can execute the provided unit tests with `cabal test`.
